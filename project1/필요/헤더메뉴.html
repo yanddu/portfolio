@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤더에 메뉴 열었다 닫았다 쓰일것</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .parent {
+            background-color: aquamarine;
+        }
+
+        .on {
+            border: 1px solid red;
+            background-color: yellow;
+        }
+
+        .container {
+            height: 1000px;
+            background-color: pink;
+        }
+
+        .gnb-wrap {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 5;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+        }
+
+        .gnb-nav {
+            width: 60%;
+            height: 100%;
+            background-color: #fff;
+        }
+
+        .show { /* .gnb-wrap */
+            display: block;
+        }
+
+        .btn-toggle {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: tomato;
+            z-index: 10;
+        }
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            // css() : 선택자 테스트 정도에 활용
+            // *.html, *.css, *.js 를 파일 분리
+
+            // className = 'on' : js 기술방식
+            // addClass() : 클래스 생성
+            $('.box button').click(function () {
+                // $('.box p')
+                // $(this).next().addClass('on');
+                // $(this).next().toggleClass('on');
+                $(this).next().toggle();
+            })
+            // removeClass() : 클래스 제거
+            $('.box').removeClass('parent');
+            // toggleClass() : 클래스를 생성했다가 클래스 제거를 왕복
+            // hasClass() : 조건문(if)을 만드는 용도
+
+        })
+    </script>
+
+    <script>
+        $(function(){
+            // h2를 클릭하면 .gnb-wrap을 보이게
+            $('.btn-gnb').click(function(){
+                $(this).next().addClass('show')
+            });
+
+            $('.btn-close').click(function(){
+                $(this).parent().parent().removeClass('show');
+            });
+
+            $('.btn-toggle').click(function(){
+                // $('.gnb-wrap').toggleClass('show')
+                $('.gnb-wrap').toggle(); /* show(), hide(), toggle() */
+            });
+        })
+    </script>
+
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="logo">
+            <img src="" alt="사이트명" />
+        </h1>
+
+        <h2 class="btn-gnb">주메뉴</h2>
+        <div class="gnb-wrap">
+            <nav class="gnb-nav">
+                <ul>
+                    <li>상위메뉴1</li>
+                    <li>상위메뉴2</li>
+                </ul>
+                <a href="#" class="btn-close">닫기</a> <!-- #은 새로고침의 여부 -->
+            </nav>
+        </div>
+    </header>
+    <a href="#" class="btn-toggle">토글(보이게/안보이게)</a>
+
+    <!-- <div class="container">본문</div>
+    <a href="#top">맨위로 이동</a> -->
+
+    <div class="box parent">
+        <button>클릭</button>
+        <p>단락</p>
+    </div>
+
+</body>
+
+</html>

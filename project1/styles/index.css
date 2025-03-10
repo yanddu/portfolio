@@ -1,0 +1,1189 @@
+@font-face{
+  font-family: 'arita';
+  font-weight: 100;
+  src: url(../fonts/Arita4.0_T.otf);
+}
+@font-face{
+  font-family: 'arita';
+  font-weight: 200;
+  src: url(../fonts/Arita4.0_M.otf);
+}
+@font-face{
+  font-family: 'arita';
+  font-weight: 300;
+  src: url(../fonts/Arita4.0_L.otf);
+}
+@font-face{
+  font-family: 'arita';
+  font-weight: 400;
+  src: url(../fonts/Arita4.0_SB.otf);
+}
+@font-face{
+  font-family: 'arita';
+  font-weight: 500;
+  src: url(../fonts/Arita4.0_B.otf);
+}
+
+button {
+  border-style: none;
+  background-color: inherit;
+}
+
+.btn{
+  margin: 30px;
+}
+
+body{
+  font-family: 'arita';
+  font-weight: 200;
+  max-width: 1920px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+/* ===============================================header */
+
+#header {
+  max-width: 1920px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(117, 117, 117, 0.411));  z-index: 9999;
+  }
+
+.logo {
+  padding: 20px 0px 20px 20px;
+}
+
+.logo img{
+  width: 50%;
+}
+
+.show {
+  display: block;
+}
+
+/* =======================메인배너 */
+
+.mainBanner{
+  position: relative;
+  height: auto;
+}
+
+.mo_list{
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.mo_list:first-child{
+  display: block;
+}
+
+.mo_mainBanner img{
+  width: 100%;
+}
+
+.text_box {
+  position: absolute;
+  top: 65%;
+  color: #3b3b3b;
+}
+
+.text_box>p{
+  margin-left: 20px;
+}
+
+.text_box>p:nth-child(3){
+  margin-top: 10px;
+}
+
+.pc_mainBanner {
+  display: none; 
+}
+
+.controls{
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  z-index: 20;
+  width: 100%;
+  text-align: center;
+}
+
+.indicator span{
+  display: inline-block;
+  width: 70px;
+  height: 2px;
+  background-color: #c0c0c0;
+  text-indent: -9999px;
+}
+
+.indicator .on{
+  background-color: #3b3b3b;
+}
+
+/* ==================메인배너 끝 */
+
+.head_top {
+  display: flex;
+  align-items: center;
+}
+
+.navUtil {
+  display: flex;
+  position: absolute;
+  right: 20px;
+  align-items: center;
+}
+
+.btn_search {
+  position: relative;
+  display: inline-block;
+  padding-right: 15px;
+  width: 25px;
+  height: 25px;
+  background: url(../imgs/search_icon.png) no-repeat 0 0;
+  background-size: 25px;
+}
+
+.btn_cart {
+  position: relative;
+  display: inline-block;
+  padding-right: 15px;
+  width: 28px;
+  height: 28px;
+  background: url(../imgs/cart_icon\ .png) no-repeat 0 0;
+  background-size: 28px;
+}
+
+.cart_num {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 35px;
+  top: -10px;
+  background-color: darkslategray;
+  border-radius: 100%;
+  color: white;
+  line-height: 20px;
+  text-align: center;
+}
+
+.btn_menu {
+  position: relative;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url(../imgs/menu_icon.png) no-repeat 0 0;
+  background-size: 28px;
+}
+
+.drop_menu {
+  display: none;
+}
+
+.drop_menu_dep1 .drop_menu_dep2 {
+  display: none;
+  position: absolute;
+  top: 30px;
+  background-color: white;
+  padding: 10px 10px 10px 10px;
+}
+
+.navbar {
+  display: none;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+  background: white;
+  z-index: 10;
+}
+
+.nav_dep1 >li.on ul {
+background-color: rgb(245, 245, 245);
+}
+
+.navbar_close {
+  position: absolute;
+  background-color: transparent;
+  border-style: none;
+  top: -10px;
+  right: -9px;
+}
+
+.m_login {
+  width: 100%;
+  padding: 30px 0px 0px;
+}
+
+.m_login > span {
+  padding: 25px;
+  background-image: url(); /* 화살표 넣을 자리 */
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.m_login_box {
+  background-color: rgb(245, 245, 245);
+  height: 130px;
+  margin: 10px 20px 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.m_login_box > p {
+  padding: 30px 0px 0px 0px;
+}
+
+.m_login_box > p > span{
+  font-weight: 400;
+  color: #6C801A;
+}
+
+.m_join {
+  width: 80px;
+  height: 32px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 400;
+}
+
+.nav_dep2  {
+  display: none;
+  font-weight: 300;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.nav_dep2>li{
+  padding: 10px;
+}
+
+.nav_dep3 {
+  display: none;
+  font-weight: 300;
+  font-size: 0.9rem;
+  padding: 5px;
+}
+
+.nav_dep3 > li{
+  padding: 10px;
+}
+
+.list_dep1 {
+  padding: 15px;
+  border-bottom: 1px solid lightgray;
+  margin: 10px;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.m_info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.info_box {
+  padding: 12px 0px 12px 0px;
+  margin: 5px;
+  background-color: rgb(245, 245, 245);
+  width: 45%;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.info_box a {
+  margin-left: 5%;
+}
+
+.m_menu img {
+  border-radius: 100%;
+  padding: 5px 15px;
+  width: 100px;
+}
+
+.m_menu ul {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+/* ==============================================container */
+.notice {
+  display: flex;
+  align-items: center;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.notice_box {
+  display: flex;
+  flex-grow: 1;
+  background: rgb(245, 245, 245);
+  font-size: 0.9rem;
+  overflow: hidden;
+  height: 40px;
+  width: 90%;
+  margin: 30px 20px;
+  line-height: 40px;
+}
+
+.notice p{
+  color: #92908e;
+  white-space: nowrap;
+  padding-left: 20px;
+}
+
+.notice_box li{
+  font-weight: 300;
+  font-size: 0.8rem;
+  flex-grow: 1;
+  overflow: hidden;
+  line-height: 40px;
+  width: 100%;
+  height: 40px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 30px;
+}
+
+/* ================상품추천리스트 */
+
+.recList_wrap{
+  position: relative;
+}
+
+.recLists{
+  padding-left: 15px;
+  flex-wrap: nowrap;
+  width: 90%;
+}
+
+.recLists>ul{
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.6s;
+}
+
+.reclist {
+  flex-basis: 100%;
+  flex-shrink: 0;
+}
+
+.recLists p {
+  font-weight: 400;
+  font-size: 1.5rem;
+}  
+
+.recLists_p{
+  display: inline-block;
+}
+
+.recLists a{
+  display: flex;
+  text-wrap: nowrap;
+}
+
+.recLists img {
+  display: block;
+  margin-right: 30px;
+  width: 100px;
+  height: 100%;
+}
+
+.recList_text span{
+  display: block;
+}
+
+.recList_text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.recList_t{
+  font-size: 0.8rem;
+  padding-bottom: 5px;
+  font-weight: 300;
+}
+
+.origin_p{
+  font-size: 0.8rem;
+  text-decoration: line-through;
+  padding-bottom: 3px;
+  font-weight: 300;
+}
+
+.sale_percent{
+  font-weight: 400;
+  color: #ff6733;
+  padding-right: 5px;
+  font-size: 0.9rem;
+}
+
+.price_result{
+  color: rgb(116, 116, 116);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.btn_recList{
+  position: absolute;
+  top: 21px;
+  left: 280px;
+}
+
+.sale_wrap{
+  display: flex;
+}
+
+.btn_prev {
+  background-image: url(../imgs/btn_prev.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  background-color: #dddddd;
+  text-indent: -9999px;
+  border-radius: 3px;
+  width: 22px;
+  height: 22px;
+}
+
+.btn_next{
+  background-image: url(../imgs/btn_next.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  background-color: #dddddd;
+  text-indent: -9999px;
+  border-radius: 3px;
+  width: 22px;
+  height: 22px;
+}
+
+.btn_list {
+  width: 100%;
+  height: 40px;
+  margin-top: 30px;
+  background: white;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* =============상품추천리스트 끝 */
+
+/* ==============오늘만 이가격 시작 */
+.promo{
+  position: relative;
+  height: auto;
+  background-position: top center;
+}
+
+
+.picMo{
+  background-image: url(../imgs/mo_todaymenu.png); /* 클릭시 이벤트 페이지로 이동, 이미지로 수정해야할지 고민 */
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+
+.today_text {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.promo > .today_text > h3{
+  color: #3b3b3b;
+  padding-left: 0;
+  font-size: 1.2rem;
+}
+
+.today_text h4 {
+  margin-top: 80%;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  color: #3b3b3b;
+}
+
+.today_price{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.today_price p:nth-child(2){
+  color: gray;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+.today_price p:nth-child(1){
+  display: flex;
+  margin-right: 20px;
+  background: #FD5C5C;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+#timer {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: rgb(82, 81, 81);
+    padding-top: 5%;
+    padding-left: 65%;
+    width: 700px;
+    position: absolute;
+}
+
+.timer_img{
+  position: absolute;
+  right: 118px;
+  top: 39px;
+}
+
+/* ============오늘만 이가격 끝 */
+
+/* ============이벤트영역(출첵, 리뉴얼) 시작 */
+.event {
+  position: relative;
+  height: auto;
+}
+
+.event_banner img{
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+}
+
+.event_text {
+  position: absolute;
+  margin-top: 25%;
+  padding: 25px;
+}
+
+.event_t{
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.open_banner img{
+  width: 100%;
+  height: 100%;
+}
+
+.open_text{
+  color: white;
+  position: absolute;
+  margin-top: -28%;
+  padding-left: 25px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* ==========이벤트 영역 끝 */
+
+/* ==========매장소개 시작 */
+
+.swiper {
+  width: 500px;
+  height: auto;
+}
+
+.swiper .swiper-slide .item-m {
+  display: block;
+}
+
+.swiper .swiper-slide .item-pc{
+  display: none;
+}
+
+.swiper .swiper-slide p {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 20px;
+}
+
+.storeInfo>h3 {
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.storeInfo>p {
+  margin: 0 21px 25px;
+  color: gray;
+}
+
+.btn_storeInfo {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  background: white;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* =========매장소개 끝 */
+
+/* =========단체구매 시작 */
+.btn_groupBuy {
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.mo_groupBuy_pic img {
+  width: 100%;
+}
+
+.pc_groupBuy_pic {
+  display: none;
+}
+
+.groupBuy>h3{
+  margin-bottom: 10px;
+}
+
+.groupBuy>p{
+  margin: 0 21px 30px;
+  color: gray;
+}
+
+/* =========단체구매 끝 */
+
+/* ================================================footer 시작*/
+
+.userOption {
+  display: flex;
+  background-color: #67625d;
+  align-items: center;
+  height: 70px;
+}
+
+.userOption a {
+  border: 1px solid gray;
+  background-color: white;
+  line-height: 30px;
+  border-radius: 4px;
+  text-align: center;
+  text-wrap: nowrap;
+  margin-left: 10px;
+  padding: 0 5px;
+}
+
+.selectLg{
+  display: flex;
+  color: white;
+  text-wrap: nowrap;
+  padding-left: 20%;
+}
+
+.selectLg li{
+  padding-left: 10px;
+}
+
+.certificationInfo span{
+  display: block;
+  border-bottom: 1px solid rgb(206, 206, 206);
+  padding: 15px;
+  text-align: center;
+}
+
+.certificationInfo_text{
+  display: none;
+}
+
+.footer_menu{
+  padding: 20px 0 20px 0;
+}
+
+.footer_menu_list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer_menu_list li{
+  margin: 5px;
+}
+
+.footer_bottom{
+  display: flex;
+  padding: 15px;
+  font-size: 0.8rem;
+  justify-content: space-between;
+}
+/* ================================================footer 끝 */
+
+
+/* pc용 */
+@media (min-width: 1280px) {
+
+  header,body{
+    margin: 0 auto;
+  }
+
+  .btn{
+    width: 50%;
+    padding: 0px 60px;
+    margin: auto;
+  }
+
+  .main_cont{
+    padding: 0 300px;
+  }
+
+  h3{
+    font-size: 2rem;
+  }
+  /* =======================header */
+
+  #header:hover{
+    background: inherit;
+    background-color: white;
+  }
+
+  #header:hover .nav_dep2{
+    border-top: 1px solid #c2c2c2;
+  }
+
+  #header:hover .list_dep1{
+    color: #3b3b3b;
+  }
+
+  #header:hover .drop_menu_dep1{
+    color: #3b3b3b;
+  }
+
+  #header:hover .btn_search{
+    background-image: url(../imgs/search_icon_black.png);
+  }
+
+  #header:hover .btn_cart{
+    background-image: url(../imgs/icon_cart_black.png);
+  }
+
+  #header:hover .btn_dot_menu{
+    background-image: url(../imgs/icon_more_black.png);
+  }
+
+  .logo {
+    padding: 20px 50px;
+  }
+
+  .logo img{
+    width: 100%;
+  }
+
+  .navbar {
+    width: 100%; 
+    height: auto; 
+    display: block;
+    position: inherit;
+    background-color: inherit;
+}
+
+.nav_dep1 {
+    display: flex;
+    white-space: nowrap;
+    color: white;
+    vertical-align:top;
+}
+
+.nav_dep2 {
+    background-color: white;
+    color: #3b3b3b;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 69px;
+    left: 0;
+    display: flex;
+    font-weight: 300;
+    padding-left: 150px;
+}
+
+  .m_login {
+    display: none;
+  }
+
+  .m_info {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 9%;
+    width: 150px;
+    background-color: white;
+    padding: 10px;
+    text-wrap: nowrap;
+  }
+
+  .info_box {
+    background: none;
+    padding: 0px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+  }
+
+  .btn_menu {
+    display: none;
+  }
+
+  .btn_dot_menu {
+    position: relative;
+    display: inline-block;
+    padding-right: 35px;
+    width: 28px;
+    height: 28px;
+    background: url(../imgs/dot_menu_icon.png) no-repeat 0 0;
+    background-size: 28px;
+  }
+
+  .cart_num {
+    position: absolute;
+    right: 253px;
+    top: -8px;
+    background-color: darkslategray;
+    border-radius: 50%;
+    color: white;
+  }
+
+  .drop_menu {
+    display: flex;
+    padding-right: 20px;
+  }
+
+  .drop_menu_dep1 {
+    padding-right: 30px;
+    color: white;
+  }
+
+  .drop_menu_dep2 {
+    display: none;
+    color: #3b3b3b;
+  }
+
+  .drop_menu_dep2 li{
+    padding: 10px 0 10px 0;
+    text-align: center;
+  }
+
+  .list_dep1 {
+    border-style: none;
+  }
+
+  .m_menu {
+    display: none;
+  }
+
+  /* ============================================container */
+
+  /* ===========메인배너 시작 */
+  
+  .mainBanner{
+    position: relative;
+    height: auto;
+  }
+
+  .mo_mainBanner{
+    display: none;
+  }
+
+  .pc_mainBanner{
+    display: block;
+  }
+
+  .pc_list{
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .pc_list:first-child{
+    display: block;
+  }
+
+  .pc_list img{
+    width: 100%;
+  }
+
+  .align_box{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1320px;
+    height: 100%;
+    width: 100%;
+    padding: 0 60px;
+  }
+
+  .text_box{
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: auto;
+    padding-top: 50px;
+  }
+
+  .text_box>h3{
+    font-size: 2.5rem;
+  }
+
+/* =============메인베너 끝 */
+/* =======오늘 추천메뉴 시작 */
+
+.recList_wrap{
+  width: 100%;
+}
+
+.recLists {
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.reclist{
+  display: flex;
+  flex-shrink: 1;
+}
+
+.reclist li {
+  flex-basis: 25%;
+  margin: 25px;
+}
+
+.reclist img {
+  max-width: 200px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+}
+
+.recLists a{
+  display: flex;
+  flex-direction: column;
+}
+
+.recList_text {
+    margin-top: 10px;
+}
+
+.btn_recList{
+  left: 350px;
+  top: 23px;
+}
+
+  /* =======오늘 추천메뉴 끝 */
+
+  .picMo {
+    display: none;
+  }
+  
+  .picPc {
+    background-image: url(../imgs/pc_todaymenu.png);
+    display: block;
+    width: 100%;
+    height: 370px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 30px 0;
+  }
+  
+  .today_text{
+    position: absolute;
+    top: 15%;
+    left: 60%;
+    text-align: start;
+  }
+  
+  .today_text h3{
+    padding-left: 0;
+  }
+  
+  .today_text h4{
+    margin-top: 30px;
+    font-size: 1.8rem;
+  }
+  
+  .today_price{
+    font-size: 1.5rem;
+  }
+  
+  .today_price>p:nth-child(1){
+    width: 70px;
+    height: 70px;
+    order: 2;
+    margin-left: 15px;
+  }
+
+  #timer{
+    padding-left: 80%;
+    padding-top: 8%;
+  }
+  
+  .timer_img{
+    position: absolute;
+    right: 54px;
+    top: 46px;
+  }
+
+/* ========오늘만 이 가격 끝 */
+
+  .mo_groupBuy_pic {
+    display: none;
+  }
+  
+  .pc_groupBuy_pic {
+    display: block;
+    width: 100%;
+  }
+  
+  .event{
+    width: 100%;
+    display: flex;
+    /* margin: auto; */
+  }
+
+  .event_banner img{
+    margin: 0 auto;
+  }
+  
+  .event_text {
+    margin-top: 8%;
+    color: #3b3b3b;
+  }
+
+  .event_t{
+    font-size: 1.5rem;
+  }
+
+  .event_d{
+    font-size: 1.1rem;
+  }
+
+  .open_text{
+    margin-top: 10%;
+    margin-left: 51%;
+  }
+
+  /* 매장소개 */
+  .swiper{
+    width: 1300px;
+    height: auto;
+  }
+
+  .swiper .swiper-slide .item-m{
+    display: none;
+  }
+
+  .swiper .swiper-slide .item-pc{
+    display: block;
+    width: 100%;
+  }
+
+
+  .storeInfo{
+    margin-top:50px;
+  }
+  
+
+  .btn_storeInfo{
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .mo_groupBuy_pic{
+    display: none;
+  }
+
+  .pc_groupBuy_pic{
+    display: flex;
+    justify-content: center;
+  }
+
+  .groupBuy>h3{
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+
+  .groupBuy>p{
+    color: gray;
+    margin-left: 52px;
+    margin-bottom: 40px;
+  }
+
+  .btn_groupBuy{
+    margin: 30px 0 50px;
+  }
+  
+/* =====================================container 끝 */
+
+/* ===========================================footer */
+  .userOption{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+  }
+
+  .selectLg{
+    display: flex;
+    color: white;
+    padding-left: 50%;
+  }
+
+  .selectLg li{
+    padding-left: 10px;
+  }
+
+  .footer_bottom{
+    display: flex;
+    justify-content: center;
+  }
+
+  .left_box{
+    margin-right: 20px;
+  }
+
+}  

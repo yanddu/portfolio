@@ -1,0 +1,110 @@
+/* reset style */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+div,
+fieldset,
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p {
+padding: 0;
+margin: 0;
+}
+
+ul,
+ol,
+li {
+list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+strong {
+font-weight: normal;
+}
+
+address,
+em {
+font-style: normal;
+}
+
+fieldset {
+border: 0 none;
+} /* 나중에 필요에 의해 삭제해도 됨 */
+
+a {
+text-decoration: none;
+color: #666; /**/
+}
+
+a:hover {
+text-decoration: underline;
+color: #666; /**/
+}
+
+button {
+cursor: pointer;
+}
+
+/* base style */
+body {
+font-family: 'Pretendard';
+font-weight: 400;
+font-size: 16px;
+color: #262627;
+}
+
+h1,
+h2,
+h3,
+h4 {
+font-size: 100%;
+}
+
+.hidden {
+  /* 읽기는 가능하고 안보이게 처리 */
+width: 0;
+height: 0;
+line-height: 0;
+font-size: 0;
+text-indent: -9999px;
+}
+
+h2{
+    font-family: 'Cafe24Ssurround';
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 1.125rem;
+}
+
+.btn{
+	background-color: inherit;
+	border-style: none;
+}
+
+/* header Area */
+
+.show{
+    display: block;
+}
+
+/* footer Area */

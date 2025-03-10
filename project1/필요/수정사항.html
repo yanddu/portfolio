@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .btn img {
+            width:50px;
+        } */
+
+        .btn1  {
+            position:relative;
+            display:inline-block;
+            width:50px;
+            height:50px;
+            background:yellow url(http://yeoncloud.dothome.co.kr/pj/imgs/shopping.png) no-repeat 0 0;
+            background-size:50px
+        }
+
+        .btn1:hover {
+            background-image:url();
+        }
+
+        .btn1 .num {
+            position:absolute;right:-5px;top:-5px;
+            padding:2px 5px;
+            background-color:pink
+        }
+    </style>
+</head>
+<body>
+    <div class="cart-area">
+        <a href="#" class="btn btn-cart">
+            <img src="http://yeoncloud.dothome.co.kr/pj/imgs/search.png" alt="" />
+        </a>
+    </div>
+    <div class="search-area">
+        <a href="#" class="btn btn-search">
+            <img src="http://yeoncloud.dothome.co.kr/pj/imgs/shopping.png" alt="" />
+        </a>
+    </div>
+
+    <div class="search-area"><!-- background-image -->
+        <a href="#" class="btn1 btn-search">
+            <span class="hidden">검색</span>
+            <span class="num">0</span>
+        </a>
+    </div>
+</body>
+</html>

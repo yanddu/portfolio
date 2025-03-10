@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국가유산청 연습</title>
+    <link rel="stylesheet" href="./styles/common.css">
+    <style>
+        .head-top {
+            display: flex;
+        }
+
+        .head-top .search {
+            margin-left: auto;
+        }
+        /* 주요메뉴 영역 */
+        .head-btm { /*  */
+            position: fixed; right: 0; top: 0;
+            width: 60%;
+            height: 100%;
+            background-color: tomato;
+        }
+
+        
+
+
+        @media (min-width:700px){ /* 분기별로 랜더링하기 위한 조건 */
+            .head-top .search {
+            margin-left: 0;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="head-top">
+            <div class="logo">로고</div>
+            <div class="slogan">슬로건</div>
+            <div class="search">검색영역</div>
+        </div>
+        <div class="head-btm"></div>
+    </header>
+</body>
+
+</html>

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오설록, 차와 제주가 선사하는 가치 있는 쉼 | 오설록</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/index.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+
+
+    <style>
+        .show {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="head_top">
+            <h1 class="logo">
+                <img src="imgs/logo_white.png" alt="오설록로고">
+            </h1>
+            <div class="navUtil">
+                <div class="search-area"><a href="#" class="btn_search"></a></div>
+                <div class="cart_area"><a href="#" class="btn_cart"></a>
+                    <span class="cart_num">0</span>
+                </div>
+                <div class="menu_area"><a href="#" class="btn_menu"></a>
+                    <div class="btn_dot_menu"></div>
+                </div>
+                <ul class="drop_menu">
+                    <li class="drop_menu_dep1">로그인
+                        <ul class="drop_menu_dep2">
+                            <li>로그인</li>
+                            <li>회원가입</li>
+                        </ul>
+                    </li>
+                    <li class="drop_menu_dep1">KOREAN
+                        <ul class="drop_menu_dep2">
+                            <li>한국어</li>
+                            <li>English</li>
+                            <li>中文</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="n">
+            <nav class="navbar">
+                <h2 class="hidden">주요 메뉴</h2>
+                <div class="m_login">
+                    <button class="btn navbar_close">
+                        <img src="./imgs/close.png" alt="닫기" width="17px">
+                    </button>
+                    <span>로그인</span>
+                    <div class="m_login_box">
+                        <p>가입하고 <span>10% 쿠폰을 바로 사용해보세요.</p>
+                        <button class="m_join" type="button">회원가입</button>
+                    </div>
+                </div>
+                <ul class="nav_dep1">
+                    <li class="list_dep1">제품
+                        <ul class="nav_dep2">
+                            <li>베스트
+                                <ul class="nav_dep3">
+                                    <li>위클리 베스트</li>
+                                    <li>베스트</li>
+                                </ul>
+                            </li>
+                            <li>티 제품
+                                <ul class="nav_dep3">
+                                    <li>티 세트</li>
+                                    <li>명차</li>
+                                    <li>녹차/말차</li>
+                                    <li>발효차/홍차</li>
+                                    <li>블렌디드티</li>
+                                    <li>허브티</li>
+                                    <li>밀크티/아이스티</li>
+                                    <li>콤부차</li>
+                                </ul>
+                            </li>
+                            <li>티푸드
+                                <ul class="nav_dep3">
+                                    <li>과자/초콜릿</li>
+                                    <li>베이커리</li>
+                                    <li>아이스크림</li>
+                                </ul>
+                            </li>
+                            <li>티웨어
+                                <ul class="nav_dep3">
+                                    <li>용도별</li>
+                                    <li>브랜드별</li>
+                                </ul>
+                            </li>
+                            <li>라이프 스타일
+                                <ul class="nav_dep3">
+                                    <li>스킨케어</li>
+                                    <li>정기배송</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list_dep1">추석 선물</li>
+                    <li class="list_dep1">브랜드
+                        <ul class="nav_dep2">
+                            <li>오설록 스토리</li>
+                            <li>제주 티뮤지엄</li>
+                            <li>오설록 1979점</li>
+                            <li>매장 소개 및 예약</li>
+                        </ul>
+                    </li>
+                    <li class="list_dep1">단체 및 기업 구매</li>
+                </ul>
+                <div class="m_info">
+                    <div class="info_box"><a href="#">매장찾기</a></div>
+                    <div class="info_box"><a href="#">공지사항</a></div>
+                    <div class="info_box"><a href="#">고객센터</a></div>
+                    <div class="info_box"><a href="#">뷰티포인트 추후 적립</a></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div id="container">
+        <section class="mainBanner">
+            <ul class="mo_mainBanner">
+                <li class="mo_list"><img src="./imgs/mo_mainbanner1.png" alt="추석선물페이지">
+                    <div class="text_box">
+                        <h3>차 향으로 전하는 마음 <br>
+                            추석 프리미엄 선물 세트</h3>
+                        <p>오직 공식몰에서만! 최대 50%할인과 <br>
+                            뷰티포인트 추가 4% 적립 혜택을 만나보세요.</p>
+                        <p>08.26 - 09.18</p>
+                    </div>
+                </li>
+                <li class="mo_list"><img src="./imgs/mo_mainbanner2.png" alt="삼다연 제주영귤 페이지">
+                    <div class="text_box">
+                        <h3>가을 맞이에 제격인 <br>
+                            삼다연 제주영귤</h3>
+                        <p>후발효차의 중후함과 영귤의 싱그러움으로 <br>
+                            밸런스가 좋은 베스트 블렌디드 티를 만나보세요.</p>
+                        <p>09.01 - 09.30</p>
+                    </div>
+                </li>
+                <li class="mo_list"><img src="./imgs/mo_mainbanner3.png" alt="제주 말차 카스테라 페이지">
+                    <div class="text_box">
+                        <h3>베이커리랩에서 직접 구운 <br>
+                            수제 말차 카스텔라</h3>
+                        <p>오설록 파티쉐가 매일 한정 수량 굽는 <br>
+                            수제 디저트를 오설록몰에서도 경험해보세요.</p>
+                        <p>08.28 - 12.31</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="controls">
+                <div class="indicator">
+                    <span class="on">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                </div>
+            </div>
+            <ul class="pc_mainBanner">
+                <li class="pc_list"><img src="./imgs/pc_mainbanner1.png" alt="추석선물페이지">
+                    <div class="align_box">
+                        <div class="text_box">
+                            <h3>차 향으로 전하는 마음 <br>
+                                추석 프리미엄 선물 세트</h3>
+                            <p>오직 공식몰에서만! 최대 50%할인과 <br>
+                                뷰티포인트 추가 4% 적립 혜택을 만나보세요.</p>
+                            <p>08.26 - 09.18</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="pc_list"><img src="./imgs/pc_mainbanner2.png" alt="삼다연 제주영귤 페이지">
+                    <div class="align_box">
+                        <div class="text_box">
+                            <h3>가을 맞이에 제격인 <br>
+                                삼다연 제주영귤</h3>
+                            <p>후발효차의 중후함과 영귤의 싱그러움으로 <br>
+                                밸런스가 좋은 베스트 블렌디드 티를 만나보세요.</p>
+                            <p>09.01 - 09.30</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="pc_list"><img src="./imgs/pc_mainbanner3.png" alt="제주 말차 카스테라 페이지">
+                    <div class="align_box">
+                        <div class="text_box">
+                            <h3>베이커리랩에서 직접 구운 <br>
+                                수제 말차 카스텔라</h3>
+                            <p>오설록 파티쉐가 매일 한정 수량 굽는 <br>
+                                수제 디저트를 오설록몰에서도 경험해보세요.</p>
+                            <p>08.28 - 12.31</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <h3 class="hidden">이달의 이벤트</h3>
+        </section>
+        <section class="m_menu">
+            <h3 class="hidden">즐겨찾는 메뉴</h3>
+            <ul>
+                <li><a href=""><img src="./imgs/quick_chuseok.png" alt="빠른 추석메뉴"></a>
+                    <p>추석선물</p>
+                </li>
+                <li><a href=""><img src="./imgs/quick_img01.jpg" alt="빠른 티제품 메뉴"></a>
+                    <p>티 제품</p>
+                </li>
+                <li><a href=""><img src="./imgs/quick_img02.png" alt="빠른 티푸드 메뉴"></a>
+                    <p>티푸드</p>
+                </li>
+            </ul>
+        </section>
+        <div class="main_cont">
+            <section class="notice">
+                <div class="notice_box">
+                    <p>공지사항</p>
+                    <ul>
+                        <li>[공지] 오설록몰 개인정보처리방침 변경 안내 (24.07.26)</li>
+                        <li>[공지] 일부 제품 소비자 가격 인상 안내</li>
+                        <li>[공지] 오설록 제주 얼그레이 용량 변경의 건</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="recList_wrap">
+                <h3 class="hidden">추천 제품 소개</h3>
+                <h3>향긋한 마음을 전하세요</h3>
+                <div class="btn_recList">
+                    <button class="btn_prev">이전</button>
+                    <button class="btn_next">다음</button>
+                </div>
+                <div class="recLists">
+                    <ul>
+                        <div class="reclist">
+                            <li><a href="#"><img src="./imgs/reclist/1.png" alt="">
+                                    <div class="recList_text">
+                                        <span class="recList_t">오설록 티베리에이션 에센스 6종 42입</span>
+                                        <div class="recList_p">
+                                            <span class="origin_p">34,000원</span>
+                                            <div class="sale_wrap">
+                                                <span class="sale_percent">10%</span>
+                                                <span class="price_result">30,600원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a href="#"><img src="./imgs/reclist/2.png" alt="">
+                                    <div class="recList_text">
+                                        <span class="recList_t">티 에디션 카멜리아 6종 24입</span>
+                                        <div class="recList_p">
+                                            <span class="origin_p">48,000원</span>
+                                            <div class="sale_wrap">
+                                                <span class="sale_percent">25%</span>
+                                                <span class="price_result">36,000원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a href="#"><img src="./imgs/reclist/3.png" alt="">
+                                    <div class="recList_text">
+                                        <span class="recList_t">마스터 블렌드 8종 32입</span>
+                                        <div class="recList_p">
+                                            <span class="origin_p">55,000원</span>
+                                            <div class="sale_wrap">
+                                                <span class="sale_percent">15%</span>
+                                                <span class="price_result">46,750원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="reclist">
+                            <li><a href="#"><img src="./imgs/reclist/4.png" alt="">
+                                    <div class="recList_text">
+                                        <span class="recList_t">[가을한정] 표일배 세트</span>
+                                        <div class="recList_p">
+                                            <span class="origin_p">50,000원</span>
+                                            <div class="sale_wrap">
+                                                <span class="sale_percent">40%</span>
+                                                <span class="price_result">30,000원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a href="#"><img src="./imgs/reclist/5.png" alt="">
+                                    <div class="recList_text">
+                                        <span class="recList_t">티 에디션 헤리티지 9종 63입</span>
+                                        <div class="recList_p">
+                                            <span class="origin_p">150,000원</span>
+                                            <div class="sale_wrap">
+                                                <span class="sale_percent">25%</span>
+                                                <span class="price_result">112,500원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a href="#"><img src="./imgs/reclist/6.png" alt="">
+                                    <div class="recList_text">
+                                        <span class="recList_t">[보자기] 풍요로운 가을밤</span>
+                                        <div class="recList_p">
+                                            <span class="origin_p">24,100원</span>
+                                            <div class="sale_wrap">
+                                                <span class="sale_percent">10%</span>
+                                                <span class="price_result">21,690원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="reclist">
+                            <li><a href="#"><img src="./imgs/reclist/7.png" alt="">
+                                    <div class="recList_text">
+                                        <span class="recList_t">세작 80g 잎차 선물세트</span>
+                                        <div class="recList_p">
+                                            <span class="origin_p">43,500원</span>
+                                            <div class="sale_wrap">
+                                                <span class="sale_percent">20%</span>
+                                                <span class="price_result">34,800원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a href="#"><img src="./imgs/reclist/8.png" alt="">
+                                    <div class="recList_text">
+                                        <span class="recList_t">세작 80g</span>
+                                        <div class="recList_p">
+                                            <span class="origin_p">40,000원</span>
+                                            <div class="sale_wrap">
+                                                <span class="sale_percent">20%</span>
+                                                <span class="price_result">32,000원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a href="#"><img src="./imgs/reclist/9.png" alt="">
+                                    <div class="recList_text">
+                                        <span class="recList_t">티 에디션 아일랜드 6종 18입</span>
+                                        <div class="recList_p">
+                                            <span class="origin_p">36,000원</span>
+                                            <div class="sale_wrap">
+                                                <span class="sale_percent">25%</span>
+                                                <span class="price_result">27,000원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="reclist">
+                            <li><a href="#"><img src="./imgs/reclist/10.png" alt="">
+                                    <div class="recList_text">
+                                        <span class="recList_t">달빛걷기 35g</span>
+                                        <div class="recList_p">
+                                            <span class="origin_p">15,000원</span>
+                                            <div class="sale_wrap">
+                                                <span class="sale_percent">15%</span>
+                                                <span class="price_result">12,750원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a href="#"><img src="./imgs/reclist/11.png" alt="">
+                                    <div class="recList_text">
+                                        <span class="recList_t">삼다연 80g</span>
+                                        <div class="recList_p">
+                                            <span class="origin_p">40,000원</span>
+                                            <div class="sale_wrap">
+                                                <span class="sale_percent">20%</span>
+                                                <span class="price_result">21,690원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a href="#"><img src="./imgs/reclist/12.png" alt="">
+                                    <div class="recList_text">
+                                        <span class="recList_t">[보자기] 풍요로운 가을밤</span>
+                                        <div class="recList_p">
+                                            <span class="origin_p">24,100원</span>
+                                            <div class="sale_wrap">
+                                                <span class="sale_percent">10%</span>
+                                                <span class="price_result">21,690원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+
+                </div>
+                <div class="btn"><button class="btn_list">더 보기</button></div>
+            </section>
+            <section class="promo">
+                <div class="today_pic picMo"><a href="#"></a></div>
+                <div class="today_pic picPc"><a href="#"></a></div>
+                <div class="today_text">
+                    <h3>오늘만 이 가격</h3>
+                    <h4>세작 잎차 선물세트</h4>
+                    <div class="today_price">
+                        <p>20%</p>
+                        <p>43,500원</p>
+                        <p>34,800원</p>
+                    </div>
+                    <div class="timer_img"><img src="imgs/timer.png" alt="타이머아이콘" style="width: 23px;"></div>
+                    <div id="timer">
+                        <span class="hours">24</span>
+                        <span class="dots">:</span>
+                        <span class="minutes">00</span>
+                        <span class="dots">:</span>
+                        <span class="seconds">00</span>
+                    </div>
+                </div>
+            </section>
+            <section class="event">
+                <div class="event_text">
+                    <p class="event_t">9월 출석체크</p>
+                    <p class="event_d">09.01 - 09.30</p>
+                </div>
+                <div class="event_banner"><a href="#"><img src="./imgs/eventbanner.png" alt="이달의 이벤트 페이지 이동"></a></div>
+                <h3 class="hidden">이달의 이벤트</h3>
+                <div class="open_banner"><a href="#"><img src="./imgs/brand_1979_png" alt="리뉴얼오픈"></a></div>
+                <div class="open_text">
+                    <p>오설록 1979점 <br> 리뉴얼 오픈</p>
+                </div>
+            </section>
+            <section class="storeInfo">
+                <h3>매장소개</h3>
+                <p>오프라인 매장에서 다채로운 오설록을 경험하세요.</p>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="imgs/store/bukchon.jpg" alt="북촌점" class="item-pc">
+                            <img src="imgs/store/teahouse_bukchon_m.jpg" alt="북촌점" class="item-m" width="500px" height="800px">
+                            <p>티하우스 북촌점</p>
+                        </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/store/gimpo.jpg" alt="김포점" class="item-pc">
+                                <img src="imgs/store/teahouse_gimpo_m.jpg" alt="김포점" class="item-m" width="500px" height="800px">
+                                <p>티하우스김포공항점</p>
+                            </div>
+                        <div class="swiper-slide">
+                            <img src="imgs/store/haeundae.jpg" alt="해운대점" class="item-pc">
+                            <img src="imgs/store/teahouse_haeundae_m.jpg" alt="해운대점" class="item-m" width="500px" height="800px">
+                            <p>티하우스 해운대점</p>
+                        </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/store/hannam.jpg" alt="한남점" class="item-pc">
+                                <img src="imgs/store/teahouse_hannam_m.jpg" alt="한남점" class="item-m" width="500px" height="800px">
+                                <p>티하우스 한남점</p>
+                            </div>
+                        <div class="swiper-slide">
+                            <img src="imgs/store/incheon.jpg" alt="인천점" class="item-pc">
+                            <img src="imgs/store/teahouse_incheon_m.jpg" alt="인천점" class="item-m" width="500px" height="800px">
+                            <p>티하우스 인천점</p>
+                        </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/store/yongsan.jpg" alt="용산점" class="item-pc">
+                                <img src="imgs/store/teahouse_yongsan_m.jpg" alt="용산점" class="item-m" width="500px" height="800px">
+                                <p>티하우스 용산점</p>
+                            </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+                                <div class="btn"><button class="btn_storeInfo">전체 매장 둘러보기</button></div>
+            </section>
+            <section class="groupBuy">
+                <h3>단체 및 기업 구매</h3>
+                <p>대량구매 전용 서비스와 프로모션을 만나보세요.</p>
+                <div class="mo_groupBuy_pic"><a href="#"><img src="./imgs/mo_groupbuy.png" alt="단체 및 기업 구매 페이지 이동"></a>
+                </div>
+                <div class="pc_groupBuy_pic"><a href="#"><img src="./imgs/pc_groupbuy.png" alt="단체 및 기업 구매페이지 이동"></a>
+                </div>
+                <div class="btn"><button class="btn_groupBuy">바로 가기</button></div>
+            </section>
+        </div>
+
+    </div>
+    <footer id="footer">
+        <section class="mo_footer">
+            <div class="userOption">
+                <a href="#" class="signIn">로그인</a>
+                <a href="#" class="contactUs">고객센터</a>
+                <ul class="selectLg">
+                    <li>한국어</li>
+                    <li>English</li>
+                    <li>中文</li>
+                </ul>
+            </div>
+            <div class="certificationInfo">
+                <span>오설록 사업자 정보확인</span>
+                <div class="certificationInfo_text">
+                    <p>㈜ 오설록 <br>
+                        대표이사 : 서혁제 <br>
+                        주소 : 서울 특별시 용산구 한강대로 100 (한강로2가) <br>
+                        사업자 등록번호 : 390-87-01499 <br>
+                        호스팅제공자 : ㈜오설록 통신판매업신고번호 : 2019-서울용산-1173호
+                    </p>
+                    <p>
+                        (주)오설록은 오설록 브랜드를 제외한 입점 브랜드에 대해서는 통신판매중개자 이며 통신판매의 당사자가 아닙니다. <br>
+                        따라서 입점판매자가 등록한 상품정보 및 거래에 대해 책임을 지지 않습니다.
+                    </p>
+                    <p>
+                        NHN KCP 구매안전(에스크로)서비스 <br>
+                        고객님의 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에 가입한 NHN KCP의 구매안전서비스를 이용하실 수 있습니다.
+                    </p>
+                </div>
+            </div>
+            <div class="footer_menu">
+                <ul class="footer_menu_list">
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">서비스 이용약관</a></li>
+                    <li><a href="">개인정보 처리방침</a></li>
+                </ul>
+                <ul class="footer_menu_list">
+                    <li><a href="">영상정보 처리방침</a></li>
+                    <li><a href="">뷰티포인트</a></li>
+                    <li><a href="">임직원할인</a></li>
+                    <li><a href="">사이트맵</a></li>
+                    <li><a href="">전자공고</a></li>
+                </ul>
+            </div>
+            <div class="footer_bottom">
+                <div class="left_box">
+                    <p>고객센터.주문/배송문의</p>
+                    <p>help@osulloc.com</p>
+                    <p>080-805-5555</p>
+                    <p>평일 09:00 ~ 18:00(점심:12:00-13:00)</p>
+                    <p>(주말/공휴일 휴무)</p>
+                </div>
+                <div class="right_box">
+                    <p>특판, 대량구매 문의</p>
+                    <p>mall@osulloc.com</p>
+                    <p>카카오톡ID:osullocmall</p>
+                    <p>평일 09:30-17:00(점심 11:30-13:00)</p>
+                </div>
+            </div>
+        </section>
+        <section class="pc_footer"></section>
+    </footer>
+
+
+
+</body>
+
+</html>

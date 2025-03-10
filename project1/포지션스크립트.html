@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <style>
+        ul {
+            position:relative;
+            height:auto;
+        }
+
+        li {
+            position:absolute;left:0;top:0;
+            width:100%;
+            height:auto;
+        }
+
+        li img {
+            width:100%;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+
+            // page load
+            let bannerH = $('li').height();
+            $('ul').height(bannerH);    
+
+            // window resize
+            $(window).resize(function(){
+                if($(window).width()<700){ // 모바일 사이즈(미디어쿼리에 설정한 너비와 같게)
+                    bannerH = $('li').height();
+                    $('ul').height(bannerH); 
+                }   
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li><img src="https://image.osulloc.com/upload/kr/ko/adminImage/VV/TR/20240911151651429OQ.webp" alt=""></li>
+        <li><img src="https://image.osulloc.com/upload/kr/ko/adminImage/KI/BA/20240906072327367CZ.webp" alt=""></li>
+    </ul>
+    <p>다음요소</p>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        .parent1 {
+            position: relative; /* child1의 부모 */
+            width: 500px;
+            height: 300px;
+            background-color: yellow;
+        }
+
+        .parent2 {
+            width: 300px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+
+        .child1 {
+            position: absolute; right: 0; top: 50px;
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+        }
+
+        .child2 {
+            position: fixed; right: 0; top: 150px;
+            width: 50px;
+            height: 50px;
+            background-color: purple;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- position : relative (absolute된 포지션의 부모) -->
+    <!-- position : absolute (자기부모를 수시로 변경할 수 있음) -->
+    <!-- position : fixed (무조건 부모가 body) -->
+
+    <div class="parent1">
+        <div class="parent2">
+            <div class="child1">자식1</div>
+            <div class="child2">자식2</div>
+        </div>
+    </div>
+</body>
+
+</html>

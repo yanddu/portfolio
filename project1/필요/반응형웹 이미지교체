@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/common.css">
+    <style>
+        /* mobile - .banner-name 영역 */
+        .banner-name {
+            position:relative;
+            overflow:hidden;
+            margin:10px 20px; 
+        } 
+ 
+        .slide-area {
+            display:flex;
+            flex-wrap:nowrap;
+        }
+ 
+        li.slide-banner {
+            flex:0 0 100%;
+        }
+ 
+        li.slide-banner img {
+            width:100%;
+        }
+ 
+        .controls .btn-prev {
+            position:absolute;left:15px; top:45%;
+        }
+ 
+        .controls .btn-next {
+            position:absolute;right:15px; top:45%;
+        }
+ 
+        
+    </style>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+ 
+ 
+            let resizeTimeout;
+ 
+            // 최종 호출
+            $(window).resize(function(){
+                // 리사이즈 이벤트가 발생할 때마다 이전 타이머 삭제하고 새로운 타이머 실행
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(handleResize, 100); // 약 0.1초후에 handleResize 함수 호출
+            }).trigger('resize'); // 페이지 로드 시 초기 호출
+ 
+ 
+            // 모바일용 or 데스크탑용 이미지 교체
+            function handleResize(){
+                let windowSize = $(window).width(); // 윈도우의 너비에 따라
+                if( windowSize <= 900 ){ // 모바일용 출력
+                    $('.slide-banner:eq(0) img').attr('src','imgs/m-visualBanner1.jpg');
+                    $('.slide-banner:eq(1) img').attr('src','imgs/m-visualBanner2.jpg');     
+                }else{ // 데스크탑
+                    $('.slide-banner:eq(0) img').attr('src','imgs/pc-visualBanner1.jpg');
+                    $('.slide-banner:eq(1) img').attr('src','imgs/pc-visualBanner2.jpg'); 
+                }
+            }; 
+ 
+  
+        })
+    </script>
+</head>
+<body>
+    <div class="banner-name mask">
+        <ul class="slide-area">
+            <li class="slide-banner on"><img src="imgs/m-visualBanner1.jpg" alt="대체텍스트" /></li>
+            <li class="slide-banner"><img src="imgs/m-visualBanner2.jpg" alt="대체텍스트" /></li>
+        </ul>
+        <div class="controls">
+            <button class="btn-prev">이전</button>
+            <button class="btn-next">다음</button>
+        </div>
+    </div>
+</body>
+</html>

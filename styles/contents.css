@@ -1,0 +1,83 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+body{
+    font: pretendard;
+}
+
+h2 {
+    margin: 130px auto;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3D67FF;
+    border-bottom: 2px solid #3D67FF;
+    width: 330px;
+    padding: 20px;
+}
+
+.contents_container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.contents li {
+    width: 500px;
+}
+
+.contents img {
+    width: 100%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.178);
+}
+
+.contents_wrap .news_container{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.contents_wrap .news_container .news{
+    overflow: hidden;
+    width: 500px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.contents_wrap .news_container .news img{
+    width: 100%;
+    border: 1px solid #d1d1d1;
+    box-sizing: border-box;
+}
+
+.contents_wrap .news_container .news .custom-pagination{
+    position: absolute;
+    bottom: 10px;
+    left: 210px;
+    z-index: 100;
+}
+
+.scrollUp {
+    background-color: #3D67FF;
+    width: 90px;
+    height: 90px;
+    border: none;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 50px; 
+    right: 50px;
+    z-index: 999;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.scrollUp img{
+    width: 70%;
+}

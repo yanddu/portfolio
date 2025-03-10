@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배스킨라빈스</title>
+    <link rel="stylesheet" href="./style/common.css" />
+    <style>
+        /* 꾸미기 */
+        #container {
+            padding: 30px 0;
+            text-align: center;
+            background: url(./imgs/bg_hero.jpg);
+        }
+
+        .logo {
+            width: 500px;
+            background-image: url(./imgs/logo.png);
+        }
+
+        .tab {
+            width: 100%;
+            display: flex;
+            gap: 70px;
+            justify-content: center;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+
+        .tab>li {
+            border-radius: 30px 30px 0 0;
+            padding: 20px;
+            width: 33.33%;
+            /* text-transform: uppercase; */
+            color: white;
+            background-color: #db5b99;
+            cursor: pointer;
+        }
+
+        li.tab_on {
+            background-color: #0057a8;
+        }
+
+
+        .cont {
+            box-sizing: border-box;
+            padding: 0 300px;
+            width: 100%;
+        }
+
+        .cont>ul {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 30px;
+        }
+
+        .cont .product_wrap {
+            width: calc((100% - (30px * 3)) / 4);
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .cont .product_wrap img {
+            width: 100%;
+        }
+
+        .info_title {
+            font-weight: bold;
+            color: #db5b99;
+        }
+
+        .btn_slide {
+            width: 1243px;
+            height: 50px;
+            margin: auto;
+            background-color: aliceblue;
+        }
+
+        .order {
+            width: 1243px;
+            height: 350px;
+            margin: auto;
+            position: relative;
+            background-color: white;
+            border-top: 1px solid #db5b99;
+        }
+
+        .order_banner {
+            width: 100%;
+            height: 70px;
+            position: absolute;
+            /* 나중에 내용 추가시 삭제 */
+            top: 84%;
+            background-color: #db5b99;
+        }
+
+        /* 동작 컨트롤 클래스 */
+        ul.hide {
+            display: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./js/product.js"></script>
+    <script>
+        $(function () {
+            // 탭메뉴 만들기
+            let length = productList.length;
+            for (let i = 0; i < length; i++) {
+                //console.log(productList[i].tabName);
+                //html() : innerHTML,
+                //★ $('선택자').append() >> 선택자의 마지막 자식요소로 생성, >> 배너디자인시 매우 유용
+                //★ $('선택자').prepend() >> 선택자의 첫번째 자식요소로 생성
+                // after(), before()
+                $(".tab").append("<li>" + productList[i].tabName + "</li>");
+
+                // 컨텐츠영역 생성
+                $(".cont").append("<ul></ul>");
+
+                // 상품리스트 생성
+                let contListNum = productList[i].menuLists.length;
+                console.log(contListNum);
+                for (let j = 0; j < contListNum; j++) {
+                    let price = Number(productList[i].menuLists[j].price);
+                    //console.log(price);
+                    //toLocaleString() : 천단위 마다 ',' 생성. 조건! 무조건 숫자여야함.
+
+                    $(".cont ul")
+                        .eq(i)
+                        .append(
+                            //eq() : index번호를 부여 또는 확인
+                            //''는 한줄, ``는 여러줄
+                            `
+              <li class="product_wrap">
+                <img class="product_img" src="./imgs/${productList[i].division}/${productList[i].menuLists[j].imgSrc}" alt="${productList[i].menuLists[j].product}">
+                <dl class="info">
+                  <dt class="info_title">${productList[i].menuLists[j].product}</dt>
+                  <dd class="info_price">${price.toLocaleString()}원</dd>
+                </dl>
+              </li>
+              `
+                        );
+
+                    // 신메뉴
+                    let newMenu = productList[i].menuLists[j].new;
+                    console.log(newMenu);
+                    if (newMenu == true) {
+                        $(".cont ul:first-child").append(`
+              <li class="product_wrap">
+                <img class="product_img" src="./imgs/${productList[i].division}/${productList[i].menuLists[j].imgSrc}" alt="${productList[i].menuLists[j].product}">
+                <dl class="info">
+                  <dt class="info_title">${productList[i].menuLists[j].product}</dt>
+                  <dd class="info_price">${price.toLocaleString()}원</dd>
+                </dl>
+              </li>
+              `);
+                    }
+                }
+                // 기본세팅값
+                $(".cont ul").addClass("hide");
+                $(".cont ul:nth-child(1)").removeClass("hide");
+
+                // 탭선택시 하위메뉴 보여라
+                $(".tab li")
+                    .eq(i)
+                    .click(function () {
+                        $(".cont ul").eq(i).removeClass("hide").siblings().addClass("hide");
+                    });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <div class="logo"></div>
+        <ul class="tab"></ul>
+        <div class="cont"></div>
+        <div class="btn_slide"></div>
+        <div class="order">
+            <div class="order_banner">
+                <div class="cart"></div>
+                <div class="total_price"></div>
+                <div class="btn_pay"></div>
+            </div>
+</body>
+
+</html>
